@@ -1,0 +1,43 @@
+{
+  "version": "0.0.1",
+  "name": "Pelota",
+  "launch_path": "/index.html",
+  "description": "Pelota Coin Collector",
+  "type": "web",
+  "icons": {
+    "16": "/icons/pelota16.png",
+    "48": "/icons/pelota48.png",
+    "60": "/icons/pelota60.png",
+    "128": "/icons/pelota128.png"
+  },
+  "fullscreen": "true",
+  "developer": {
+    "name": "Your name",
+    "url": "https://nadeeshaeyepax.github.io/Color_Jump/"
+  },
+  "dependencies": {
+		"ads-sdk": "1.3.0"
+	},
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+    "desktop-notification": {
+      "description": "To show notifications"
+    },
+    "geolocation": {
+      "description": "Marking out user location"
+    },
+    "alarms": {
+      "description": "Scheduling alarms"
+    }
+  },
+  "locales": {
+     "en-US": {
+      "name": "Pelota",
+      "subtitle": "Make the ball match the wall",
+      "description": "Click to make the ball jump. Pass through the walls when they are the same color."
+    }
+  }
+}
