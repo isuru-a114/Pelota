@@ -1,8 +1,9 @@
 {
-  "version": "0.0.1",
+  "version": "1.0.0",
   "name": "Pelota",
   "launch_path": "/index.html",
-  "description": "Pelota Coin Collector",
+  "description": "Click to make the ball jump. Pass through the walls when they are the same color.",
+  "subtitle": "Make the ball match the wall",
   "type": "web",
   "icons": {
     "16": "/icons/pelota16.png",
@@ -10,10 +11,9 @@
     "60": "/icons/pelota60.png",
     "128": "/icons/pelota128.png"
   },
-  "fullscreen": "true",
   "developer": {
-    "name": "Your name",
-    "url": "https://nadeeshaeyepax.github.io/Color_Jump/"
+    "name": "Eyepax",
+    "url": "https://www.eyepax.com"
   },
   "dependencies": {
 		"ads-sdk": "1.3.0"
@@ -21,7 +21,10 @@
   "installs_allowed_from": [
     "*"
   ],
-  "default_locale": "en",
+  "default_locale": "en-US",
+  "categories": [
+    "sports"
+  ],
   "permissions": {
     "desktop-notification": {
       "description": "To show notifications"
@@ -33,6 +36,7 @@
       "description": "Scheduling alarms"
     }
   },
+  "fullscreen": "true",
   "locales": {
      "en-US": {
       "name": "Pelota",

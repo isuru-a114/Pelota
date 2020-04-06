@@ -52,7 +52,7 @@ class CountDown extends Phaser.Scene {
         this.image.displayWidth = game.config.width;
 
         this.text = this.add.text(game.config.width / 2 - 50, game.config.height / 2, this.initialTime, { fontSize: '100px', fill: '#FFF' });
-        this.levels = this.add.text(game.config.width / 4 + 50, game.config.height / 2 + 200, "Level : " + game.globals.level, { fontSize: '30px', fill: '#FFF' });
+        this.levels = this.add.text(game.config.width / 4 + 70, game.config.height / 2 + 200, "Level : " + game.globals.level, { fontSize: '30px', fill: '#FFF' });
 
         // Each 1000 ms call onEvent
         this.timedEvent = this.time.addEvent({ delay: 1000, callback: this.onEvent, callbackScope: this, loop: true });
@@ -70,8 +70,8 @@ class CountDown extends Phaser.Scene {
 
         // adding the ball
         this.ball = this.matter.add.image(game.config.width / 4, game.config.height / 2, "ball");
-        this.ball.displayWidth = 50;
-        this.ball.displayHeight = 50;
+        this.ball.displayWidth = 40;
+        this.ball.displayHeight = 40;
 
         // setting ball body as circular
         this.ball.setCircle()
@@ -91,19 +91,19 @@ class CountDown extends Phaser.Scene {
         });
 
         this.coins.play('coinRotate');
-        this.coins.displayWidth = 100;
-        this.coins.displayHeight = 100;
+        this.coins.displayWidth = 70;
+        this.coins.displayHeight = 70;
         this.coins.body.label = "coins";
         this.coins.setStatic(true);
 
         this.coins2.play('coinRotate');
-        this.coins2.displayWidth = 100;
-        this.coins2.displayHeight = 100;
+        this.coins2.displayWidth = 70;
+        this.coins2.displayHeight = 70;
         this.coins2.body.label = "coins2";
         this.coins2.setStatic(true);
 
 
-        scoreText = this.add.text(36, 16, 'SCORE: 0', { fontSize: '50px', fill: '#FFF' });
+        scoreText = this.add.text(36, 16, 'SCORE: 0', { fontSize: '35px', fill: '#FFF' });
 
     }
 

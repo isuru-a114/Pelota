@@ -13,15 +13,13 @@ class Menu extends Phaser.Scene {
 
     preload() {
 
-        this.load.spritesheet('btn_play', 'assets/img/btn_play_new.png', { frameWidth: 192, frameHeight: 180 });
-        this.load.spritesheet('btn_score', 'assets/img/btn_score_new.png', { frameWidth: 192, frameHeight: 180 });
-        this.load.spritesheet('btn_help', 'assets/img/btn_help_new.png', { frameWidth: 192, frameHeight: 180 });
-        this.load.spritesheet('btn_exit', 'assets/img/btn_exit_new.png', { frameWidth: 192, frameHeight: 180 });
 
-        //this.load.spritesheet('btn_play_hover', 'assets/img/btn_play_hover_new.png', { frameWidth: 192, frameHeight: 180 });
-        this.load.spritesheet('btn_score_hover', 'assets/img/btn_score_hover_new.png', { frameWidth: 192, frameHeight: 180 });
-        this.load.spritesheet('btn_help_hover', 'assets/img/btn_help_hover_new.png', { frameWidth: 192, frameHeight: 180 });
-        //this.load.spritesheet('btn_exit_hover', 'assets/img/btn_exit_hover_new.png', { frameWidth: 192, frameHeight: 180 });
+        this.load.image("btn_play", "assets/img/btn_play_new.png");
+        this.load.image("btn_score", "assets/img/btn_score_new.png");
+        this.load.image("btn_help", "assets/img/btn_help_new.png");
+        this.load.image("btn_exit", "assets/img/btn_exit_new.png");
+        this.load.image("btn_score_hover", "assets/img/btn_score_hover_new.png");
+        this.load.image("btn_help_hover", "assets/img/btn_help_hover_new.png");
 
         this.load.image("bgMenu", "assets/img/menu_screen.png");
         this.load.image("btn_play_hover", "assets/img/btn_play_hover_new.png");

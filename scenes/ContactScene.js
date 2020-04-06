@@ -27,7 +27,7 @@ class ContactScene extends Phaser.Scene {
         //this.kaios = this.add.text(game.config.width/2, game.config.height/1.2, "KaiOS ", {font: "80px Impact", color: "#ffffff"});
         //this.kaios.setOrigin(0.5);
 
-        //this.goBack = this.add.text(game.config.width - game.config.width*15/100, game.config.height - game.config.height*5/100, "back").setFontSize(40).setFontFamily("Arial").setOrigin(0.5);
+        this.goBack = this.add.text(game.config.width - game.config.width*8/100, game.config.height - game.config.height*5/100, "Back").setFontSize(30).setFontFamily("Arial").setOrigin(0.5);
 
         this.input.keyboard.on('keyup', function (e) {
             if (e.key == "SoftRight") {

@@ -53,8 +53,8 @@ class EasyPlayGame extends Phaser.Scene {
 
         // adding the ball
         this.ball = this.matter.add.image(game.config.width / 4, game.config.height / 2, "ball");
-        this.ball.displayWidth = 50;
-        this.ball.displayHeight = 50;
+        this.ball.displayWidth = 40;
+        this.ball.displayHeight = 40;
 
         // setting ball body as circular
         this.ball.setCircle();
@@ -79,8 +79,8 @@ class EasyPlayGame extends Phaser.Scene {
         });
 
         this.coins.play('coinRotate');
-        this.coins.displayWidth = 100;
-        this.coins.displayHeight = 100;
+        this.coins.displayWidth = 70;
+        this.coins.displayHeight = 70;
         this.coins.body.label = "coins";
         this.coins.setStatic(true);
 
@@ -94,7 +94,7 @@ class EasyPlayGame extends Phaser.Scene {
         this.placeCoin();
 
         // setting ball velocity (horizontal, vertical)
-        this.ball.setVelocity(0.5, 0);
+        this.ball.setVelocity(1, 0);
 
         console.log(gameOptions.gravity);
 
@@ -128,7 +128,7 @@ class EasyPlayGame extends Phaser.Scene {
         }, this);
 
 
-        scoreText = this.add.text(36, 16, 'SCORE: 0', { fontSize: '60px', fill: '#FFF' });
+        scoreText = this.add.text(36, 16, 'SCORE: 0', { fontSize: '35px', fill: '#FFF' });
 
         //Game pause
         this.gamePause = this.input.keyboard.on("keyup_UP", () => {
@@ -339,7 +339,7 @@ class EasyPlayGame extends Phaser.Scene {
 //     var windowHeight = window.innerHeight;
 //     var windowRatio = windowWidth / windowHeight;
 //     var gameRatio = game.config.width / game.config.height;
-   
+
 //     if (windowRatio < gameRatio) {
 //         canvas.style.width = windowWidth + "px";
 //         canvas.style.height = (windowWidth / gameRatio) + "px";

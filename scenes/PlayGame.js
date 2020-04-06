@@ -8,7 +8,6 @@ class PlayGame extends Phaser.Scene {
     preload() {
         this.load.image("wall", "assets/img/wall.png");
         this.load.image("ball", "assets/img/ball.png");
-        this.load.image("coin", "assets/img/coin.png");
         this.load.image("gamePlayBg", "assets/img/gamePlayBg.png");
 
         //game pause
@@ -27,11 +26,11 @@ class PlayGame extends Phaser.Scene {
 
         this.LEVEL = localStorage.getItem('LEVEL') || 0;
 
-        if(this.LEVEL == 0){
+        if (this.LEVEL == 0) {
             this.LEVEL = 1;
         }
 
-        levelText = this.add.text(490, 16, 'LEVEL: '+this.LEVEL, { fontSize: '40px', fill: '#FFF' });
+        levelText = this.add.text(490, 16, 'LEVEL: ' + this.LEVEL, { fontSize: '40px', fill: '#FFF' });
 
         // arrays where to store left and right walls
         this.leftWalls = [];
@@ -39,11 +38,11 @@ class PlayGame extends Phaser.Scene {
 
         this.currentBar = localStorage.getItem('BARS') || 0;
 
-        if(this.currentBar == 0){
+        if (this.currentBar == 0) {
             this.currentBar = gameOptions.bars;
         }
 
-       
+
         // each wall is made by "gameOptions.bars" pieces, so we actually have "gameOptions.bars" walls each side
         for (var i = 0; i < this.currentBar; i++) {
             // adding left and right walls
@@ -53,8 +52,8 @@ class PlayGame extends Phaser.Scene {
 
         // adding the ball
         this.ball = this.matter.add.image(game.config.width / 4, game.config.height / 2, "ball");
-        this.ball.displayWidth = 50;
-        this.ball.displayHeight = 50;
+        this.ball.displayWidth = 40;
+        this.ball.displayHeight = 40;
 
         // setting ball body as circular
         this.ball.setCircle()
@@ -76,8 +75,8 @@ class PlayGame extends Phaser.Scene {
         });
 
         this.coins.play('coinRotate');
-        this.coins.displayWidth = 100;
-        this.coins.displayHeight = 100;
+        this.coins.displayWidth = 70;
+        this.coins.displayHeight = 70;
         this.coins.body.label = "coins";
         this.coins.setStatic(true);
 
@@ -124,7 +123,7 @@ class PlayGame extends Phaser.Scene {
         }, this);
 
 
-        scoreText = this.add.text(36, 16, 'SCORE: 0', { fontSize: '40px', fill: '#FFF' });
+        scoreText = this.add.text(36, 16, 'SCORE: 0', { fontSize: '35px', fill: '#FFF' });
 
         //Game pause
         this.gamePause = this.input.keyboard.on("keyup_UP", () => {
@@ -248,7 +247,7 @@ class PlayGame extends Phaser.Scene {
 
         // painting the ball with the same color used by the random wall
         this.ball.setTint(randomWall.body.color);
-        
+
         // also assigning the ball body a custom "color" property
         this.ball.body.color = randomWall.body.color;
     }
@@ -274,18 +273,18 @@ class PlayGame extends Phaser.Scene {
             switch (score) {
                 case 350:
                     this.LEVEL = parseInt(this.LEVEL, 10) + 1;
-                    levelText.setText('LEVEL: '+this.LEVEL);
+                    levelText.setText('LEVEL: ' + this.LEVEL);
                     this.gameLevelFlag = score;
                     this.gameLevelUpdate();
                     break;
                 case 700:
                     this.LEVEL = parseInt(this.LEVEL, 10) + 1;
-                    levelText.setText('LEVEL: '+this.LEVEL);
+                    levelText.setText('LEVEL: ' + this.LEVEL);
                     this.gameLevelFlag = score;
                     this.gameLevelUpdate();
                     break;
             }
-            localStorage.setItem('LEVEL',this.LEVEL);
+            localStorage.setItem('LEVEL', this.LEVEL);
         }
 
     }
@@ -315,7 +314,7 @@ class PlayGame extends Phaser.Scene {
 
         this.currentBar = parseInt(this.currentBar, 10) + 2;
         localStorage.setItem('BARS', this.currentBar);
-       
+
         for (var i = 0; i < this.currentBar; i++) {
 
             this.leftWalls[i] = this.addWallL2(i, LEFT);

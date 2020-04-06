@@ -53,10 +53,10 @@ window.onload = function () {
         type: Phaser.AUTO,
 
         // width of the game, in pixels
-        width: 488.889,
+        width: 480,
 
         // height of the game, in pixels
-        height: 600,
+        height: 640,
 
         // background color (black)
         backgroundColor: 0x000000,
@@ -94,18 +94,12 @@ window.onload = function () {
             HelpScene,
             ContactScene,
             OptionScene,
-            playGameLevel2,
-            playGameLevel3,
             SoundsScene,
             Difficulty,
             CountDown,
             EasyPlayGame,
             HardPlayGame,
-            EasyPlayGameLevel2,
-            HardPlayGameLevel2,
-            HardPlayGameLevel3,
             IntroductionScene]
-
     }
 
     // game creation
