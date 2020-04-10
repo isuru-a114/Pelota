@@ -3,23 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a0909c59-1295-42af-8225-35b337c8ea7b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.zip" beforeDir="false" afterPath="$PROJECT_DIR$/app.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Coin-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Coin-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Contact.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/Contact.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manifest.webapp" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.webapp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/ContactScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/ContactScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/CountDown.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/CountDown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/Difficulty.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/Difficulty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/EasyPlayGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/EasyPlayGame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/GameOver.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/GameOver.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/HardPlayGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/HardPlayGame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/HelpScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/HelpScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/IntroductionScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/IntroductionScene.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/PlayGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/PlayGame.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +63,8 @@
       <workItem from="1585760462665" duration="518000" />
       <workItem from="1585801786104" duration="2000" />
       <workItem from="1586150828659" duration="244000" />
+      <workItem from="1586236551352" duration="753000" />
+      <workItem from="1586314740634" duration="3000" />
     </task>
     <servers />
   </component>

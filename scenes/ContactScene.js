@@ -9,6 +9,20 @@ class ContactScene extends Phaser.Scene {
     }
 
     create(){
+
+        //kaiads
+        getKaiAd({
+            publisher: 'ca24f2d0-de89-4c1a-80c4-51e14d317000',
+            app: 'Pelota',
+            slot: 'Pelota',
+            onerror: err => console.error('Custom catch:', err),
+            onready: ad => {
+                // Ad is ready to be displayed
+                // calling 'display' will display the ad
+                ad.call('display')
+            }
+        })
+
         this.image = this.add.image(game.config.width/2, game.config.height/2, 'bgcontact');
         this.image.displayHeight = game.config.height;
         this.image.displayWidth = game.config.width;

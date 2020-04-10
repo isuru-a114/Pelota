@@ -34,18 +34,18 @@ class GameOver extends Phaser.Scene {
 
     level = 1;
 
-    //kaiads
-    getKaiAd({
-      publisher: 'ca24f2d0-de89-4c1a-80c4-51e14d317000',
-      app: 'Pelota',
-      slot: 'Pelota',
-      onerror: err => console.error('Custom catch:', err),
-      onready: ad => {
-        // Ad is ready to be displayed
-        // calling 'display' will display the ad
-        ad.call('display')
-      }
-    })
+    // //kaiads
+    // getKaiAd({
+    //   publisher: 'ca24f2d0-de89-4c1a-80c4-51e14d317000',
+    //   app: 'Pelota',
+    //   slot: 'Pelota',
+    //   onerror: err => console.error('Custom catch:', err),
+    //   onready: ad => {
+    //     // Ad is ready to be displayed
+    //     // calling 'display' will display the ad
+    //     ad.call('display')
+    //   }
+    // })
 
     this.input.keyboard.on('keyup', function (e) {
       if (e.key == "Enter") {
@@ -78,9 +78,9 @@ class GameOver extends Phaser.Scene {
     //this.gameOver = this.add.text(game.config.width / 4, game.config.height / 2, 'GAME OVER', { fontSize: '80px', fill: '#FFF' });
 
     //===============================
-    this.FinalScore = this.add.text(game.config.width / 1.6, game.config.width / 2, score, { fontSize: '30px', fill: '#FFF' });
+    this.FinalScore = this.add.text(game.config.width / 1.6, game.config.width / 1.83, score, { fontSize: '30px', fill: '#FFF' });
 
-    this.bestScore = this.add.text(game.config.width / 1.6, game.config.width / 1.67, '' + localStorage.getItem('Best Score'), { fontSize: '30px', fill: '#FFF' });
+    this.bestScore = this.add.text(game.config.width / 1.6, game.config.width / 1.55, '' + localStorage.getItem('Best Score'), { fontSize: '30px', fill: '#FFF' });
 
     //==================================
 

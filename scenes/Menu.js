@@ -30,6 +30,7 @@ class Menu extends Phaser.Scene {
     }
 
     create() {
+        
 
         this.image = this.add.image(game.config.width / 2, game.config.height / 2, 'bgMenu');
         this.image.displayHeight = game.config.height;
@@ -56,7 +57,6 @@ class Menu extends Phaser.Scene {
             } else if (e.key == "SoftRight") {
                 //console.log("soft right key");
                 this.goToContactScene();
-
             }
         }, this);
 
