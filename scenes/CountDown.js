@@ -33,12 +33,20 @@ class CountDown extends Phaser.Scene {
         this.text.setText(this.initialTime);
 
         this.keEnter = this.input.keyboard.on("keyup_ENTER", () => {
-            this.scene.start(game.globals.gameDiffculty);
+            this.scene.transition({
+                target: game.globals.gameDiffculty,
+                duration: 2,
+            })
+            // this.scene.start(game.globals.gameDiffculty);
         }, this);
 
         if (this.initialTime == 0) {
             //console.log(game.globals.gameDiffculty);
-            this.scene.start(game.globals.gameDiffculty);
+            this.scene.transition({
+                target: game.globals.gameDiffculty,
+                duration: 2,
+            })
+            // this.scene.start(game.globals.gameDiffculty);
         }
     }
 

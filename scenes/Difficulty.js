@@ -98,7 +98,11 @@ class Difficulty extends Phaser.Scene {
     }
     goBackScene() {
         //console.log("clicked")
-        this.scene.start("Menu");
+        this.scene.transition({
+            target: "Menu",
+            duration: 2,
+        })
+        // this.scene.start("Menu");
     }
 
     moveUp() {
@@ -191,17 +195,29 @@ class Difficulty extends Phaser.Scene {
             case "Easy":
                 //console.log("Play SELECT");
                 game.globals.gameDiffculty = "EasyPlayGame";
-                this.scene.start("CountDown");
+                // this.scene.start("CountDown");
+                this.scene.transition({
+                    target: "CountDown",
+                    duration: 2,
+                })
                 break;
             case "Medium":
                 //console.log("ScoreScene SELECT");
                 game.globals.gameDiffculty = "PlayGame";
-                this.scene.start("CountDown");
+                // this.scene.start("CountDown");
+                this.scene.transition({
+                    target: "CountDown",
+                    duration: 2,
+                })
                 break;
             case "Hard":
                 //console.log("Option SELECT");
                 game.globals.gameDiffculty = "HardPlayGame";
-                this.scene.start("CountDown");
+                // this.scene.start("CountDown");
+                this.scene.transition({
+                    target: "CountDown",
+                    duration: 2,
+                })
                 break;
             default:
         }

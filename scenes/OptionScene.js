@@ -185,7 +185,11 @@ class OptionScene extends Phaser.Scene {
 
     goBackScene(){
         //console.log("clicked")
-        this.scene.start("Menu");
+        this.scene.transition({
+            target: "Menu",
+            duration: 2,
+        })
+        // this.scene.start("Menu");
     }
 
     update(){

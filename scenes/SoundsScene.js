@@ -147,7 +147,11 @@ class SoundsScene extends Phaser.Scene {
 
     goBackScene(){
         //console.log("clicked")
-        this.scene.start("OptionScene");
+        this.scene.transition({
+            target: "OptionScene",
+            duration: 2,
+        })
+        // this.scene.start("OptionScene");
     }
 
     update(){

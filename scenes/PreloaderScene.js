@@ -102,9 +102,17 @@ class Preloader extends Phaser.Scene{
     var isFirst =  localStorage.getItem('isFirstTime')
     //console.log("is first"+ isFirst);
     if(isFirst == null){
-      this.scene.start('IntroductionScene');
+      this.scene.transition({
+        target: "IntroductionScene",
+        duration: 2,
+    })
+      // this.scene.start('IntroductionScene');
     }else {
-      this.scene.start('Menu');
+      this.scene.transition({
+        target: "Menu",
+        duration: 2,
+    })
+      // this.scene.start('Menu');
     }
   }
 

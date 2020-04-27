@@ -153,12 +153,20 @@ class Menu extends Phaser.Scene {
     }
 
     goToContactScene() {
-        this.scene.start('ContactScene');
+        this.scene.transition({
+            target: "ContactScene",
+            duration: 2,
+        })
+        // this.scene.start('ContactScene');
     }
 
 
     goToOptionScene() {
-        this.scene.start('OptionScene');
+        this.scene.transition({
+            target: "OptionScene",
+            duration: 2,
+        })
+        // this.scene.start('OptionScene');
     }
 
     changeMenuButtonWithArrowDown() {
@@ -297,7 +305,7 @@ class Menu extends Phaser.Scene {
                 // this.scene.start("Difficulty")
                 this.scene.transition({
                     target: "Difficulty",
-                    duration: 20,
+                    duration: 2,
                 })
                 break;
             case "ScoreScene":
@@ -305,7 +313,7 @@ class Menu extends Phaser.Scene {
                 // this.scene.start("ScoreScene")
                 this.scene.transition({
                     target: "ScoreScene",
-                    duration: 20,
+                    duration: 2,
                 })
                 break;
             case "Help":
@@ -313,7 +321,7 @@ class Menu extends Phaser.Scene {
                 // this.scene.start("HelpScene")
                 this.scene.transition({
                     target: "HelpScene",
-                    duration: 20,
+                    duration: 2,
                 })
                 break;
             // case "Exit":
