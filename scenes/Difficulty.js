@@ -198,7 +198,7 @@ class Difficulty extends Phaser.Scene {
                 // this.scene.start("CountDown");
                 this.scene.transition({
                     target: "CountDown",
-                    duration: 2,
+                    duration: 0,
                 })
                 break;
             case "Medium":
@@ -207,7 +207,7 @@ class Difficulty extends Phaser.Scene {
                 // this.scene.start("CountDown");
                 this.scene.transition({
                     target: "CountDown",
-                    duration: 2,
+                    duration: 0,
                 })
                 break;
             case "Hard":
@@ -216,7 +216,7 @@ class Difficulty extends Phaser.Scene {
                 // this.scene.start("CountDown");
                 this.scene.transition({
                     target: "CountDown",
-                    duration: 2,
+                    duration: 0,
                 })
                 break;
             default:

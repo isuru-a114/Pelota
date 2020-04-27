@@ -305,7 +305,7 @@ class Menu extends Phaser.Scene {
                 // this.scene.start("Difficulty")
                 this.scene.transition({
                     target: "Difficulty",
-                    duration: 2,
+                    duration: 0,
                 })
                 break;
             case "ScoreScene":
@@ -313,7 +313,7 @@ class Menu extends Phaser.Scene {
                 // this.scene.start("ScoreScene")
                 this.scene.transition({
                     target: "ScoreScene",
-                    duration: 2,
+                    duration: 0,
                 })
                 break;
             case "Help":
