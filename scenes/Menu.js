@@ -30,7 +30,7 @@ class Menu extends Phaser.Scene {
     }
 
     create() {
-        
+
 
         this.image = this.add.image(game.config.width / 2, game.config.height / 2, 'bgMenu');
         this.image.displayHeight = game.config.height;
@@ -51,7 +51,7 @@ class Menu extends Phaser.Scene {
 
 
         this.input.keyboard.on('keyup', function (e) {
-           if (e.key == "SoftRight") {
+            if (e.key == "SoftRight") {
                 //console.log("soft right key");
                 this.goToContactScene();
             }
@@ -294,15 +294,27 @@ class Menu extends Phaser.Scene {
         switch (this.selected_button) {
             case "Play":
                 //console.log("Play SELECT");
-                this.scene.switch("Difficulty")
+                // this.scene.start("Difficulty")
+                this.scene.transition({
+                    target: "Difficulty",
+                    duration: 20,
+                })
                 break;
             case "ScoreScene":
                 //console.log("ScoreScene SELECT");
-                this.scene.switch("ScoreScene")
+                // this.scene.start("ScoreScene")
+                this.scene.transition({
+                    target: "ScoreScene",
+                    duration: 20,
+                })
                 break;
             case "Help":
                 //console.log("Option SELECT");
-                this.scene.switch("HelpScene")
+                // this.scene.start("HelpScene")
+                this.scene.transition({
+                    target: "HelpScene",
+                    duration: 20,
+                })
                 break;
             // case "Exit":
             //     //console.log("Exit SELECT");
