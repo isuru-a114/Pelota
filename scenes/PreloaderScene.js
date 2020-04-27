@@ -84,16 +84,17 @@ class Preloader extends Phaser.Scene{
     //     this.gotoNextScreen();
     //   }
     // }, this);
-  }
-
-  update(){
     this.time.addEvent({
       delay: 2000,
       callback: ()=>{
        this.gotoNextScreen();
       },
-      loop: true
+      loop: false
     })
+  }
+
+  update(){
+  
   }
 
 
@@ -101,9 +102,9 @@ class Preloader extends Phaser.Scene{
     var isFirst =  localStorage.getItem('isFirstTime')
     //console.log("is first"+ isFirst);
     if(isFirst == null){
-      this.scene.start('IntroductionScene');
+      this.scene.run('IntroductionScene');
     }else {
-      this.scene.start('Menu');
+      this.scene.run('Menu');
     }
   }
 

@@ -126,17 +126,17 @@ class HardPlayGame extends Phaser.Scene {
         scoreText = this.add.text(36, 16, 'SCORE: 0', { fontSize: '35px', fill: '#FFF' });
 
         //Game pause
-        this.gamePause = this.input.keyboard.on("keyup_UP", () => {
-            this.Pause = this.add.image(game.config.width / 2, game.config.height / 2, "pause");
-            this.Pause.displayWidth = 450;
-            this.Pause.displayHeight = 200;
-            this.matter.world.pause();
-            return true;
-        }, this);
-        this.keEnter = this.input.keyboard.on("keyup_DOWN", () => {
-            this.Pause.destroy();
-            this.matter.world.resume();
-        }, this);
+        // this.gamePause = this.input.keyboard.on("keyup_UP", () => {
+        //     this.Pause = this.add.image(game.config.width / 2, game.config.height / 2, "pause");
+        //     this.Pause.displayWidth = 450;
+        //     this.Pause.displayHeight = 200;
+        //     this.matter.world.pause();
+        //     return true;
+        // }, this);
+        // this.keEnter = this.input.keyboard.on("keyup_DOWN", () => {
+        //     this.Pause.destroy();
+        //     this.matter.world.resume();
+        // }, this);
     }
 
     // method to add a wall, given its number (0 = top) and it side

@@ -51,10 +51,7 @@ class Menu extends Phaser.Scene {
 
 
         this.input.keyboard.on('keyup', function (e) {
-            if (e.key == "SoftLeft") {
-                //console.log("soft left key");
-                this.goToOptionScene();
-            } else if (e.key == "SoftRight") {
+           if (e.key == "SoftRight") {
                 //console.log("soft right key");
                 this.goToContactScene();
             }
@@ -297,15 +294,15 @@ class Menu extends Phaser.Scene {
         switch (this.selected_button) {
             case "Play":
                 //console.log("Play SELECT");
-                this.scene.start("Difficulty")
+                this.scene.switch("Difficulty")
                 break;
             case "ScoreScene":
                 //console.log("ScoreScene SELECT");
-                this.scene.start("ScoreScene")
+                this.scene.switch("ScoreScene")
                 break;
             case "Help":
                 //console.log("Option SELECT");
-                this.scene.start("HelpScene")
+                this.scene.switch("HelpScene")
                 break;
             // case "Exit":
             //     //console.log("Exit SELECT");

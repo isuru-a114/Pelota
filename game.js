@@ -61,7 +61,6 @@ window.onload = function () {
         // background color (black)
         backgroundColor: 0x000000,
 
-
         // scene to play
         // scene: playGame,
 
@@ -83,9 +82,8 @@ window.onload = function () {
         pixelArt: true,
 
         scene: [Boot,
-            Preload,
-            ScoreScene,
             Preloader,
+            ScoreScene,
             Title,
             Options,
             PlayGame,

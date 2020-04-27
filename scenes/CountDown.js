@@ -51,7 +51,7 @@ class CountDown extends Phaser.Scene {
         this.image.displayHeight = game.config.height;
         this.image.displayWidth = game.config.width;
 
-        this.text = this.add.text(game.config.width / 2 - 50, game.config.height / 2, this.initialTime, { fontSize: '100px', fill: '#FFF' });
+        this.text = this.add.text(game.config.width / 2, game.config.height / 2, this.initialTime, { fontSize: '100px', fill: '#FFF' });
         this.levels = this.add.text(game.config.width / 4 + 70, game.config.height / 2 + 200, "Level : " + game.globals.level, { fontSize: '30px', fill: '#FFF' });
 
         // Each 1000 ms call onEvent

@@ -35,7 +35,7 @@ class Preload extends Phaser.Scene {
         this.time.addEvent({
             delay: 1000,
             callback: () => {
-                this.scene.start('Menu');
+                this.scene.start('Difficulty');
             },
             callbackScope: this
         });

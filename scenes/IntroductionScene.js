@@ -93,7 +93,7 @@ class IntroductionScene  extends Phaser.Scene{
 
 
         }
-        this.skip = this.add.text(game.config.width - game.config.width * 10 / 100, game.config.height - game.config.height * 5 / 100, "Skip").setFontSize(50).setFontFamily("Arial").setOrigin(0.5);
+        this.skip = this.add.text(game.config.width - game.config.width * 10 / 100, game.config.height - game.config.height * 5 / 100, "Skip").setFontSize(30).setFontFamily("Arial").setOrigin(0.5);
 
     }
 
@@ -121,7 +121,7 @@ class IntroductionScene  extends Phaser.Scene{
                 this.selected_screen = "intro";
                 break;
         }
-        this.skip = this.add.text(game.config.width - game.config.width * 10 / 100, game.config.height - game.config.height * 5 / 100, "Skip").setFontSize(50).setFontFamily("Arial").setOrigin(0.5);
+        this.skip = this.add.text(game.config.width - game.config.width * 10 / 100, game.config.height - game.config.height * 5 / 100, "Skip").setFontSize(30).setFontFamily("Arial").setOrigin(0.5);
 
     }
 }
