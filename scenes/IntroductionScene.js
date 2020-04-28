@@ -67,7 +67,7 @@ class IntroductionScene extends Phaser.Scene {
             moveAbove: true,
             // moveBelow: false,
 
-            duration: 500,
+            duration: 100,
         })
     }
 
