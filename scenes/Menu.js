@@ -31,7 +31,6 @@ class Menu extends Phaser.Scene {
 
     create() {
 
-
         this.image = this.add.image(game.config.width / 2, game.config.height / 2, 'bgMenu');
         this.image.displayHeight = game.config.height;
         this.image.displayWidth = game.config.width;
@@ -51,7 +50,7 @@ class Menu extends Phaser.Scene {
 
 
         this.input.keyboard.on('keyup', function (e) {
-            if (e.key == "SoftRight") {
+           if (e.key == "SoftRight") {
                 //console.log("soft right key");
                 this.goToContactScene();
             }
@@ -153,20 +152,12 @@ class Menu extends Phaser.Scene {
     }
 
     goToContactScene() {
-        this.scene.transition({
-            target: "ContactScene",
-            duration: 2,
-        })
-        // this.scene.start('ContactScene');
+        this.scene.start('ContactScene');
     }
 
 
     goToOptionScene() {
-        this.scene.transition({
-            target: "OptionScene",
-            duration: 2,
-        })
-        // this.scene.start('OptionScene');
+        this.scene.start('OptionScene');
     }
 
     changeMenuButtonWithArrowDown() {
@@ -302,30 +293,30 @@ class Menu extends Phaser.Scene {
         switch (this.selected_button) {
             case "Play":
                 //console.log("Play SELECT");
-                // this.scene.start("Difficulty")
                 this.scene.transition({
                     target: "Difficulty",
                     moveAbove: true,
                     duration: 200,
                 })
+                // this.scene.switch("Difficulty")
                 break;
             case "ScoreScene":
                 //console.log("ScoreScene SELECT");
-                // this.scene.start("ScoreScene")
                 this.scene.transition({
                     target: "ScoreScene",
                     moveAbove: true,
                     duration: 200,
                 })
+                // this.scene.switch("ScoreScene")
                 break;
             case "Help":
                 //console.log("Option SELECT");
-                // this.scene.start("HelpScene")
                 this.scene.transition({
                     target: "HelpScene",
                     moveAbove: true,
                     duration: 200,
                 })
+                // this.scene.switch("HelpScene")
                 break;
             // case "Exit":
             //     //console.log("Exit SELECT");

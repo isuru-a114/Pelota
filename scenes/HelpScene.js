@@ -12,7 +12,7 @@ class HelpScene extends Phaser.Scene {
     }
 
     create(){
-
+      
         this.input.keyboard.on('keyup', function (e) {
             if (e.key == "SoftRight") {
                 //console.log("soft right key");
@@ -124,9 +124,12 @@ class HelpScene extends Phaser.Scene {
         //console.log("clicked")
         this.scene.transition({
             target: "Menu",
-            duration: 2,
+            moveAbove: true,
+            // moveBelow: false,
+
+            duration: 500,
         })
-        // this.scene.start("Menu");
+        // this.scene.restart("Menu");
     }
 
 

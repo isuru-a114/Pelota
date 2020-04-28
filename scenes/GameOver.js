@@ -250,7 +250,7 @@ class GameOver extends Phaser.Scene {
       case "Restart":
         //console.log("Restart SELECT");
         this.reStoreGameLevelValues();
-        this.scene.start(game.globals.gameDiffculty);
+        // this.scene.start(game.globals.gameDiffculty);
         this.scene.transition({
           target: game.globals.gameDiffculty,
           moveAbove: true,
@@ -264,7 +264,7 @@ class GameOver extends Phaser.Scene {
           moveAbove: true,
           duration: 200,
         })
-        this.scene.start("Menu")
+        // this.scene.start("Menu")
         break;
       case "Exit":
         //console.log("Exit SELECT");
