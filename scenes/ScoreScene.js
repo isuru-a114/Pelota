@@ -12,7 +12,6 @@ class ScoreScene extends Phaser.Scene {
     // method to be executed once, when the scene has been created
     create() {
 
-
         //kaiads
         getKaiAd({
             publisher: 'ca24f2d0-de89-4c1a-80c4-51e14d317000',
@@ -81,7 +80,10 @@ class ScoreScene extends Phaser.Scene {
         //console.log("clicked")
         this.scene.transition({
             target: "Menu",
-            duration: 2,
+            moveAbove: true,
+            // moveBelow: false,
+
+            duration: 500,
         })
         // this.scene.start("Menu");
     }

@@ -64,7 +64,10 @@ class IntroductionScene extends Phaser.Scene {
         // this.scene.start('Menu');
         this.scene.transition({
             target: "Menu",
-            duration: 2,
+            moveAbove: true,
+            // moveBelow: false,
+
+            duration: 500,
         })
     }
 

@@ -18,7 +18,6 @@ class Difficulty extends Phaser.Scene {
     }
 
     create() {
-
         this.selected_button = 'Easy';
 
         this.image = this.add.image(game.config.width / 2, game.config.height / 2, 'bgDifficulty');
@@ -100,9 +99,12 @@ class Difficulty extends Phaser.Scene {
         //console.log("clicked")
         this.scene.transition({
             target: "Menu",
-            duration: 2,
+            moveAbove: true,
+            // moveBelow: false,
+
+            duration: 2000,
         })
-        // this.scene.start("Menu");
+        // this.scene.switch("Menu");
     }
 
     moveUp() {
@@ -195,29 +197,38 @@ class Difficulty extends Phaser.Scene {
             case "Easy":
                 //console.log("Play SELECT");
                 game.globals.gameDiffculty = "EasyPlayGame";
-                // this.scene.start("CountDown");
                 this.scene.transition({
                     target: "CountDown",
-                    duration: 0,
+                    moveAbove: true,
+                    // moveBelow: false,
+
+                    duration: 1000,
                 })
+                // this.scene.switch("CountDown");
                 break;
             case "Medium":
                 //console.log("ScoreScene SELECT");
                 game.globals.gameDiffculty = "PlayGame";
-                // this.scene.start("CountDown");
                 this.scene.transition({
                     target: "CountDown",
-                    duration: 0,
+                    moveAbove: true,
+                    // moveBelow: false,
+
+                    duration: 1000,
                 })
+                // this.scene.switch("CountDown");
                 break;
             case "Hard":
                 //console.log("Option SELECT");
                 game.globals.gameDiffculty = "HardPlayGame";
-                // this.scene.start("CountDown");
                 this.scene.transition({
                     target: "CountDown",
-                    duration: 0,
+                    moveAbove: true,
+                    // moveBelow: false,
+
+                    duration: 1000,
                 })
+                // this.scene.switch("CountDown");
                 break;
             default:
         }
