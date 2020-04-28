@@ -253,14 +253,16 @@ class GameOver extends Phaser.Scene {
         this.scene.start(game.globals.gameDiffculty);
         this.scene.transition({
           target: game.globals.gameDiffculty,
-          duration: 0,
+          moveAbove: true,
+          duration: 200,
         })
         break;
       case "Menu":
         //console.log("Menu SELECT");
         this.scene.transition({
           target: "Menu",
-          duration: 0,
+          moveAbove: true,
+          duration: 200,
         })
         this.scene.start("Menu")
         break;
@@ -268,7 +270,8 @@ class GameOver extends Phaser.Scene {
         //console.log("Exit SELECT");
         this.scene.transition({
           target: "Menu",
-          duration: 0,
+          moveAbove: true,
+          duration: 200,
         })
         break;
       default:

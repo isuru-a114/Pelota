@@ -35,7 +35,8 @@ class CountDown extends Phaser.Scene {
         this.keEnter = this.input.keyboard.on("keyup_ENTER", () => {
             this.scene.transition({
                 target: game.globals.gameDiffculty,
-                duration: 2,
+                moveAbove: true,
+                duration: 200,
             })
             // this.scene.start(game.globals.gameDiffculty);
         }, this);
@@ -44,7 +45,8 @@ class CountDown extends Phaser.Scene {
             //console.log(game.globals.gameDiffculty);
             this.scene.transition({
                 target: game.globals.gameDiffculty,
-                duration: 2,
+                moveAbove: true,
+                duration: 200,
             })
             // this.scene.start(game.globals.gameDiffculty);
         }

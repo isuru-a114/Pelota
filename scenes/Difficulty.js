@@ -100,7 +100,8 @@ class Difficulty extends Phaser.Scene {
         //console.log("clicked")
         this.scene.transition({
             target: "Menu",
-            duration: 2,
+            moveAbove: true,
+            duration: 200,
         })
         // this.scene.start("Menu");
     }
@@ -198,7 +199,8 @@ class Difficulty extends Phaser.Scene {
                 // this.scene.start("CountDown");
                 this.scene.transition({
                     target: "CountDown",
-                    duration: 0,
+                    moveAbove: true,
+                    duration: 200,
                 })
                 break;
             case "Medium":
@@ -207,7 +209,8 @@ class Difficulty extends Phaser.Scene {
                 // this.scene.start("CountDown");
                 this.scene.transition({
                     target: "CountDown",
-                    duration: 0,
+                    moveAbove: true,
+                    duration: 200,
                 })
                 break;
             case "Hard":
@@ -216,7 +219,8 @@ class Difficulty extends Phaser.Scene {
                 // this.scene.start("CountDown");
                 this.scene.transition({
                     target: "CountDown",
-                    duration: 0,
+                    moveAbove: true,
+                    duration: 200,
                 })
                 break;
             default:

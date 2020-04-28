@@ -1,11 +1,11 @@
-class Preloader extends Phaser.Scene{
-  constructor () {
-      super({key: 'Preloader', active: false});
+class Preloader extends Phaser.Scene {
+  constructor() {
+    super({ key: 'Preloader', active: false });
   }
   // init () {
   //   this.readyCount = 0;
   // }
-  preload () {
+  preload() {
     // // add logo image
     // this.image = this.add.image(game.config.width/2, game.config.height/3, 'logo');
     // // display progress bar
@@ -71,7 +71,7 @@ class Preloader extends Phaser.Scene{
     this.load.image('splash', 'assets/img/splash.png');
   }
 
-  create(){
+  create() {
     this.image = this.add.image(game.config.width / 2, game.config.height / 2, 'splash');
     this.image.displayHeight = game.config.height;
     this.image.displayWidth = game.config.width;
@@ -86,33 +86,35 @@ class Preloader extends Phaser.Scene{
     // }, this);
     this.time.addEvent({
       delay: 2000,
-      callback: ()=>{
-       this.gotoNextScreen();
+      callback: () => {
+        this.gotoNextScreen();
       },
       loop: false
     })
   }
 
-  update(){
-  
+  update() {
+
   }
 
 
-  gotoNextScreen(){
-    var isFirst =  localStorage.getItem('isFirstTime')
+  gotoNextScreen() {
+    var isFirst = localStorage.getItem('isFirstTime')
     //console.log("is first"+ isFirst);
-    if(isFirst == null){
-      this.scene.transition({
-        target: "IntroductionScene",
-        duration: 2,
-    })
-      // this.scene.start('IntroductionScene');
-    }else {
-      this.scene.transition({
-        target: "Menu",
-        duration: 2,
-    })
-      // this.scene.start('Menu');
+    if (isFirst == null) {
+      // this.scene.transition({
+      //   target: "IntroductionScene",
+      //   moveAbove: true,
+      //   duration: 1000,
+      // })
+      this.scene.start('IntroductionScene');
+    } else {
+      // this.scene.transition({
+      //   target: "Menu",
+      //   moveAbove: true,
+      //   duration: 1000,
+      // })
+      this.scene.start('Menu');
     }
   }
 
