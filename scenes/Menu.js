@@ -156,7 +156,7 @@ class Menu extends Phaser.Scene {
         this.scene.transition({
             target: "ContactScene",
             moveAbove: true,
-            duration: 0,
+            duration: 100,
         })
     }
 
@@ -301,7 +301,7 @@ class Menu extends Phaser.Scene {
                 this.scene.transition({
                     target: "Difficulty",
                     moveAbove: true,
-                    duration: 100,
+                    duration: 200,
                 })
                 // this.scene.switch("Difficulty")
                 break;
@@ -310,7 +310,7 @@ class Menu extends Phaser.Scene {
                 this.scene.transition({
                     target: "ScoreScene",
                     moveAbove: true,
-                    duration: 100,
+                    duration: 200,
                 })
                 // this.scene.switch("ScoreScene")
                 break;
@@ -319,7 +319,7 @@ class Menu extends Phaser.Scene {
                 this.scene.transition({
                     target: "HelpScene",
                     moveAbove: true,
-                    duration: 100,
+                    duration: 200,
                 })
                 // this.scene.switch("HelpScene")
                 break;
