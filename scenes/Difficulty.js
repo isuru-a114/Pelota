@@ -199,7 +199,7 @@ class Difficulty extends Phaser.Scene {
                     target: "CountDown",
                     moveAbove: true,
                     duration: 200,
-                })
+                });
                 // this.scene.switch("CountDown");
                 break;
             case "Medium":
@@ -209,7 +209,7 @@ class Difficulty extends Phaser.Scene {
                     target: "CountDown",
                     moveAbove: true,
                     duration: 200,
-                })
+                });
                 // this.scene.switch("CountDown");
                 break;
             case "Hard":
@@ -219,7 +219,7 @@ class Difficulty extends Phaser.Scene {
                     target: "CountDown",
                     moveAbove: true,
                     duration: 200,
-                })
+                });
                 // this.scene.switch("CountDown");
                 break;
             default:
