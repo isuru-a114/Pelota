@@ -156,7 +156,7 @@ class Menu extends Phaser.Scene {
         this.scene.transition({
             target: "ContactScene",
             moveAbove: true,
-            duration: 10,
+            duration: 0,
         })
     }
 

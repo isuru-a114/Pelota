@@ -36,7 +36,7 @@ class CountDown extends Phaser.Scene {
             this.scene.transition({
                 target: game.globals.gameDiffculty,
                 moveAbove: true,
-                duration: 200,
+                duration: 100,
             })
             // this.scene.start(game.globals.gameDiffculty);
         }, this);
@@ -46,7 +46,7 @@ class CountDown extends Phaser.Scene {
             this.scene.transition({
                 target: game.globals.gameDiffculty,
                 moveAbove: true,
-                duration: 200,
+                duration: 100,
             })
             // this.scene.start(game.globals.gameDiffculty);
         }

@@ -66,7 +66,6 @@ class IntroductionScene extends Phaser.Scene {
             target: "Menu",
             moveAbove: true,
             // moveBelow: false,
-
             duration: 100,
         })
     }

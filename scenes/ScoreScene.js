@@ -81,7 +81,7 @@ class ScoreScene extends Phaser.Scene {
         this.scene.transition({
             target: "Menu",
             moveAbove: true,
-            duration: 200,
+            duration: 0,
         })
         // this.scene.start("Menu");
     }
