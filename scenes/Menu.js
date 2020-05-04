@@ -30,6 +30,12 @@ class Menu extends Phaser.Scene {
     }
 
     create() {
+        this.cameras.main.fadeFrom(2000, Phaser.Math.Between(50, 255), Phaser.Math.Between(50, 255), Phaser.Math.Between(50, 255));
+        this.cameras.main.on('camerafadeoutcomplete', function () {
+
+            this.scene.start("Difficulty");
+
+        }, this);
 
         this.image = this.add.image(game.config.width / 2, game.config.height / 2, 'bgMenu');
         this.image.displayHeight = game.config.height;
@@ -50,7 +56,7 @@ class Menu extends Phaser.Scene {
 
 
         this.input.keyboard.on('keyup', function (e) {
-           if (e.key == "SoftRight") {
+            if (e.key == "SoftRight") {
                 //console.log("soft right key");
                 this.goToContactScene();
             }
@@ -298,11 +304,12 @@ class Menu extends Phaser.Scene {
         switch (this.selected_button) {
             case "Play":
                 //console.log("Play SELECT");
-                this.scene.transition({
-                    target: "Difficulty",
-                    moveAbove: true,
-                    duration: 200,
-                })
+                //  Get a random color
+                var red = Phaser.Math.Between(50, 255);
+                var green = Phaser.Math.Between(50, 255);
+                var blue = Phaser.Math.Between(50, 255);
+
+                this.cameras.main.fade(2000, red, green, blue);
                 // this.scene.switch("Difficulty")
                 break;
             case "ScoreScene":

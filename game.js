@@ -80,6 +80,7 @@ window.onload = function () {
         },
         url: '',
         pixelArt: true,
+        
 
         scene: [Boot,
             Preloader,
