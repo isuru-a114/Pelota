@@ -1,7 +1,7 @@
 {
   "version": "1.0.2",
   "name": "Pelota",
-  "start_url": "https://isuru-a114.github.io/Pelota/",
+  "launch_path": "/index.html",
   "description": "Click to make the ball jump. Pass through the walls when they are the same color.",
   "subtitle": "Make the ball match the wall",
   "display": "standalone",
