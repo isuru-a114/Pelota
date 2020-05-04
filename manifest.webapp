@@ -4,7 +4,7 @@
   "launch_path": "/Pelota/index.html",
   "description": "Click to make the ball jump. Pass through the walls when they are the same color.",
   "subtitle": "Make the ball match the wall",
-  "type": "privileged",
+  "type": "web",
   "icons": {
     "16": "/Pelota/icons/pelota16.png",
     "48": "./Pelota/icons/pelota48.png",
