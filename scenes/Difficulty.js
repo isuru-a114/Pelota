@@ -18,7 +18,6 @@ class Difficulty extends Phaser.Scene {
     }
 
     create() {
-        this.cameras.main.fadeFrom(2000, Phaser.Math.Between(50, 255), Phaser.Math.Between(50, 255), Phaser.Math.Between(50, 255));
         this.selected_button = 'Easy';
 
         this.image = this.add.image(game.config.width / 2, game.config.height / 2, 'bgDifficulty');

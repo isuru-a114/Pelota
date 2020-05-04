@@ -31,7 +31,7 @@ class Menu extends Phaser.Scene {
 
     create() {
         this.cameras.main.fadeFrom(2000, Phaser.Math.Between(50, 255), Phaser.Math.Between(50, 255), Phaser.Math.Between(50, 255));
-        this.cameras.main.on('camerafadeoutcomplete', function () {
+        this.cameras.main.on('transitioncomplete', function () {
 
             this.scene.start("Difficulty");
 
@@ -309,16 +309,16 @@ class Menu extends Phaser.Scene {
                 var green = Phaser.Math.Between(50, 255);
                 var blue = Phaser.Math.Between(50, 255);
 
-                this.cameras.main.fade(2000, red, green, blue);
+                this.cameras.main.fadeIn(2000, red, green, blue);
                 // this.scene.switch("Difficulty")
                 break;
             case "ScoreScene":
                 //console.log("ScoreScene SELECT");
-                this.scene.transition({
-                    target: "ScoreScene",
-                    moveAbove: true,
-                    duration: 200,
-                })
+                var t1 = this.scene.transition({
+                    target: 'Difficulty',
+                    duration: 3000,
+                    moveAbove: true
+                });
                 // this.scene.switch("ScoreScene")
                 break;
             case "Help":
