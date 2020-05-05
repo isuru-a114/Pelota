@@ -30,7 +30,26 @@ class Menu extends Phaser.Scene {
     }
 
     create() {
-        this.cameras.main.fadeFrom(2000, Phaser.Math.Between(50, 255), Phaser.Math.Between(50, 255), Phaser.Math.Between(50, 255));
+        //
+        this.events.on('transitionstart', function (fromScene, duration) {
+            this.cameras.main.setZoom(0.05);
+        }, this);
+
+        this.events.on('transitioncomplete', function (fromScene, duration) {
+            // this.cameras.main.zoomTo(1, 300);
+            this.cameras.main.zoomTo(1, 300);
+        }, this);
+
+        // this.events.on('transitioncomplete', function (fromScene) {
+
+        // });
+
+        this.events.on('transitionout', function (toScene, duration) {
+
+            this.cameras.main.zoomTo(0.05, 300);
+
+        }, this);
+        //
         this.cameras.main.on('transitioncomplete', function () {
 
             this.scene.start("Difficulty");
@@ -302,7 +321,7 @@ class Menu extends Phaser.Scene {
 
     transitionOut(progress) {
         // this.cameras.main.x = -(600 * progress);
-        this.cameras.main.zoomTo(0.05, 300); 
+        this.cameras.main.zoomTo(0.05, 300);
     }
 
     callMenuButton() {
@@ -322,9 +341,9 @@ class Menu extends Phaser.Scene {
             case "ScoreScene":
                 //console.log("ScoreScene SELECT");
                 var t1 = this.scene.transition({
-                    target: 'Difficulty',
-                    duration: 3000,
-                    moveAbove: true
+                    target: 'ScoreScene',
+                    duration: 300,
+                    moveBelow: true
                 });
                 // this.scene.switch("ScoreScene")
                 break;
@@ -332,7 +351,7 @@ class Menu extends Phaser.Scene {
                 //console.log("Option SELECT");
                 this.scene.transition({
                     target: "HelpScene",
-                    moveAbove: true,
+                    moveBelow: true,
                     duration: 200,
                 })
                 // this.scene.switch("HelpScene")

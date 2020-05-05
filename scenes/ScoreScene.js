@@ -12,18 +12,39 @@ class ScoreScene extends Phaser.Scene {
     // method to be executed once, when the scene has been created
     create() {
 
-        //kaiads
-        // getKaiAd({
-        //     publisher: 'ca24f2d0-de89-4c1a-80c4-51e14d317000',
-        //     app: 'Pelota',
-        //     slot: 'Pelota',
-        //     onerror: err => console.error('Custom catch:', err),
-        //     onready: ad => {
-        //         // Ad is ready to be displayed
-        //         // calling 'display' will display the ad
-        //         ad.call('display')
-        //     }
-        // })
+        // kaiads
+        getKaiAd({
+            publisher: 'ca24f2d0-de89-4c1a-80c4-51e14d317000',
+            app: 'Pelota',
+            slot: 'Pelota',
+            onerror: err => console.error('Custom catch:', err),
+            onready: ad => {
+                // Ad is ready to be displayed
+                // calling 'display' will display the ad
+                ad.call('display')
+            }
+        })
+
+        //
+        this.events.on('transitionstart', function (fromScene, duration) {
+            this.cameras.main.setZoom(0.05);
+        }, this);
+
+        this.events.on('transitioncomplete', function (fromScene, duration) {
+            // this.cameras.main.zoomTo(1, 300);
+            this.cameras.main.zoomTo(1, 300);
+        }, this);
+
+        // this.events.on('transitioncomplete', function (fromScene) {
+
+        // });
+
+        this.events.on('transitionout', function (toScene, duration) {
+
+            this.cameras.main.zoomTo(0.05, 300);
+
+        }, this);
+        //
 
         this.input.keyboard.on('keyup', function (e) {
             if (e.key == "SoftRight") {

@@ -13,7 +13,26 @@ class IntroductionScene extends Phaser.Scene {
 
     create() {
 
+        //
+        this.events.on('transitionstart', function (fromScene, duration) {
+            this.cameras.main.setZoom(0.05);
+        }, this);
 
+        this.events.on('transitioncomplete', function (fromScene, duration) {
+            // this.cameras.main.zoomTo(1, 300);
+            this.cameras.main.zoomTo(1, 300);
+        }, this);
+
+        // this.events.on('transitioncomplete', function (fromScene) {
+
+        // });
+
+        this.events.on('transitionout', function (toScene, duration) {
+
+            this.cameras.main.zoomTo(0.05, 300);
+
+        }, this);
+        //
 
         this.selected_screen = 'intro';
 
@@ -28,7 +47,7 @@ class IntroductionScene extends Phaser.Scene {
         this.skip = this.add.text(game.config.width - game.config.width * 10 / 100, game.config.height - game.config.height * 5 / 100, "Skip").setFontSize(30).setFontFamily("Arial").setOrigin(0.5);
 
         this.input.keyboard.on('keyup', function (e) {
-           if (e.key == "SoftRight") {
+            if (e.key == "SoftRight") {
                 //console.log("soft right key");
                 this.goToMenuScene();
             }
