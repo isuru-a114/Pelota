@@ -23,13 +23,30 @@ class Difficulty extends Phaser.Scene {
 
     create() {
 
+
+        this.selected_button = 'Easy';
+
+        this.image = this.add.image(game.config.width / 2, game.config.height / 2, 'bgDifficulty');
+        this.image.displayHeight = 0;
+        this.image.displayWidth = 0;
+
         //
-        this.events.on('transitionstart', function (fromScene, duration) {+
-            this.cameras.main.setSize(0, 0);
-            this.cameras.main.zoomTo(1, 2000);
+        this.events.on('transitionstart', function (fromScene, duration) {
+            console.log("he he")
         }, this);
 
-        this.events.on('transitioncomplete', function () { console.log('Complete'); });
+        this.events.on('transitioncomplete', function (fromScene, duration) {
+            this.tweens.add({
+                targets: this.image,
+                scaleX: 0.6,
+                scaleY: 0.6,
+                duration: 300
+            });
+        }, this);
+
+        // this.events.on('transitioncomplete', function (fromScene) {
+           
+        // });
 
         this.events.on('transitionout', function (toScene, duration) {
 
@@ -37,11 +54,6 @@ class Difficulty extends Phaser.Scene {
 
         }, this);
         //
-        this.selected_button = 'Easy';
-
-        this.image = this.add.image(game.config.width / 2, game.config.height / 2, 'bgDifficulty');
-        this.image.displayHeight = game.config.height;
-        this.image.displayWidth = game.config.width;
 
 
 
@@ -216,8 +228,7 @@ class Difficulty extends Phaser.Scene {
                 game.globals.gameDiffculty = "EasyPlayGame";
                 this.scene.transition({
                     target: "CountDown",
-                    moveAbove: true,
-                    duration: 200,
+                    duration: 300,
                 });
                 // this.scene.switch("CountDown");
                 break;

@@ -302,7 +302,7 @@ class Menu extends Phaser.Scene {
 
     transitionOut(progress) {
         // this.cameras.main.x = -(600 * progress);
-        this.cameras.main.zoomTo(0.05, 1000); 
+        this.cameras.main.zoomTo(0.05, 300); 
     }
 
     callMenuButton() {
@@ -312,7 +312,7 @@ class Menu extends Phaser.Scene {
                 //  Get a random color
                 this.scene.transition({
                     target: 'Difficulty',
-                    duration: 1000,
+                    duration: 300,
                     moveBelow: true,
                     onUpdate: this.transitionOut,
                     data: { x: 400, y: 300 }

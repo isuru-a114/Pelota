@@ -102,19 +102,19 @@ class Preloader extends Phaser.Scene {
     var isFirst = localStorage.getItem('isFirstTime')
     //console.log("is first"+ isFirst);
     if (isFirst == null) {
-      this.scene.transition({
-        target: "IntroductionScene",
-        moveAbove: true,
-        duration: 1000,
-      })
-      // this.scene.start('IntroductionScene');
+      // this.scene.transition({
+      //   target: "IntroductionScene",
+      //   moveAbove: true,
+      //   duration: 1000,
+      // })
+      this.scene.start('IntroductionScene');
     } else {
-      this.scene.transition({
-        target: "Menu",
-        moveAbove: true,
-        duration: 1000,
-      })
-      // this.scene.start('Menu');
+      // this.scene.transition({
+      //   target: "Menu",
+      //   moveAbove: true,
+      //   duration: 1000,
+      // })
+      this.scene.start('Menu');
     }
   }
 

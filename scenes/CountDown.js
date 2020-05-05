@@ -58,8 +58,29 @@ class CountDown extends Phaser.Scene {
         this.initialTime = 3;
 
         this.image = this.add.image(game.config.width / 2, game.config.height / 2, 'gamePlayBg');
-        this.image.displayHeight = game.config.height;
-        this.image.displayWidth = game.config.width;
+        this.image.displayHeight = 0;
+        this.image.displayWidth = 0;
+
+        //
+        this.events.on('transitionstart', function (fromScene, duration) {
+            console.log("he he")
+        }, this);
+
+        this.events.on('transitioncomplete', function (fromScene, duration) {
+            this.tweens.add({
+                targets: this.image,
+                scaleX: 0.6,
+                scaleY: 0.6,
+                duration: 300
+            });
+        }, this);
+
+        this.events.on('transitionout', function (toScene, duration) {
+
+            this.cameras.main.zoomTo(0.05, 300);
+
+        }, this);
+        //
 
         this.text = this.add.text(game.config.width / 2, game.config.height / 2, this.initialTime, { fontSize: '100px', fill: '#FFF' });
         this.levels = this.add.text(game.config.width / 4 + 70, game.config.height / 2 + 200, "Level : " + game.globals.level, { fontSize: '30px', fill: '#FFF' });
