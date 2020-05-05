@@ -22,6 +22,21 @@ class Difficulty extends Phaser.Scene {
     }
 
     create() {
+
+        //
+        this.events.on('transitionstart', function (fromScene, duration) {+
+            this.cameras.main.setSize(0, 0);
+            this.cameras.main.zoomTo(1, 2000);
+        }, this);
+
+        this.events.on('transitioncomplete', function () { console.log('Complete'); });
+
+        this.events.on('transitionout', function (toScene, duration) {
+
+            this.cameras.main.zoomTo(0.05, 300);
+
+        }, this);
+        //
         this.selected_button = 'Easy';
 
         this.image = this.add.image(game.config.width / 2, game.config.height / 2, 'bgDifficulty');
