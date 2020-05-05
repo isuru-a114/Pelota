@@ -4,6 +4,10 @@ class Difficulty extends Phaser.Scene {
         super({ key: "Difficulty", active: false });
     }
 
+    SceneB() {
+        Phaser.Scene.call(this, { key: 'Menu' });
+    }
+
     preload() {
         this.load.image("bgDifficulty", "assets/img/Difficulity.png");
 

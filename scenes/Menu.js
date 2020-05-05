@@ -301,7 +301,8 @@ class Menu extends Phaser.Scene {
     }
 
     transitionOut(progress) {
-        this.cameras.main.x = -(600 * progress);
+        // this.cameras.main.x = -(600 * progress);
+        this.cameras.main.zoomTo(0.05, 500); 
     }
 
     callMenuButton() {
