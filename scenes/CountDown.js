@@ -75,11 +75,11 @@ class CountDown extends Phaser.Scene {
 
         // });
 
-        this.events.on('transitionout', function (toScene, duration) {
+        // this.events.on('transitionout', function (toScene, duration) {
 
-            this.cameras.main.zoomTo(0.05, 300);
+        //     this.cameras.main.zoomTo(0.05, 300);
 
-        }, this);
+        // }, this);
         //
 
         this.text = this.add.text(game.config.width / 2, game.config.height / 2, this.initialTime, { fontSize: '100px', fill: '#FFF' });
