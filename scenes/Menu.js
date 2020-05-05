@@ -300,16 +300,22 @@ class Menu extends Phaser.Scene {
         }
     }
 
+    transitionOut(progress) {
+        this.cameras.main.x = -(600 * progress);
+    }
+
     callMenuButton() {
         switch (this.selected_button) {
             case "Play":
                 //console.log("Play SELECT");
                 //  Get a random color
-                var red = Phaser.Math.Between(50, 255);
-                var green = Phaser.Math.Between(50, 255);
-                var blue = Phaser.Math.Between(50, 255);
-
-                this.cameras.main.fadeIn(2000, red, green, blue);
+                this.scene.transition({
+                    target: 'Difficulty',
+                    duration: 500,
+                    moveBelow: true,
+                    onUpdate: this.transitionOut,
+                    data: { x: 400, y: 300 }
+                });
                 // this.scene.switch("Difficulty")
                 break;
             case "ScoreScene":
