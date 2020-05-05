@@ -34,7 +34,7 @@ class GameOver extends Phaser.Scene {
 
     //
     this.events.on('transitionstart', function (fromScene, duration) {
-      this.cameras.main.setZoom(0.05);
+      this.cameras.main.setZoom(0.001);
     }, this);
 
     this.events.on('transitioncomplete', function (fromScene, duration) {
@@ -275,7 +275,7 @@ class GameOver extends Phaser.Scene {
         this.scene.transition({
           target: game.globals.gameDiffculty,
           moveAbove: true,
-          duration: 100,
+          duration: 300,
         })
         break;
       case "Menu":
@@ -283,7 +283,7 @@ class GameOver extends Phaser.Scene {
         this.scene.transition({
           target: "Menu",
           moveAbove: true,
-          duration: 100,
+          duration: 300,
         })
         // this.scene.start("Menu")
         break;
@@ -292,7 +292,7 @@ class GameOver extends Phaser.Scene {
         this.scene.transition({
           target: "Menu",
           moveAbove: true,
-          duration: 100,
+          duration: 300,
         })
         break;
       default:

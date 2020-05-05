@@ -63,7 +63,7 @@ class CountDown extends Phaser.Scene {
 
         //
         this.events.on('transitionstart', function (fromScene, duration) {
-            this.cameras.main.setZoom(0.05);
+            this.cameras.main.setZoom(0.001);
         }, this);
 
         this.events.on('transitioncomplete', function (fromScene, duration) {

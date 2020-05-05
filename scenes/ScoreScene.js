@@ -27,7 +27,7 @@ class ScoreScene extends Phaser.Scene {
 
         //
         this.events.on('transitionstart', function (fromScene, duration) {
-            this.cameras.main.setZoom(0.05);
+            this.cameras.main.setZoom(0.001);
         }, this);
 
         this.events.on('transitioncomplete', function (fromScene, duration) {
@@ -102,7 +102,7 @@ class ScoreScene extends Phaser.Scene {
         this.scene.transition({
             target: "Menu",
             moveAbove: true,
-            duration: 0,
+            duration: 300,
         })
         // this.scene.start("Menu");
     }

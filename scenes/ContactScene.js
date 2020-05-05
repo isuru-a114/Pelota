@@ -25,7 +25,7 @@ class ContactScene extends Phaser.Scene {
 
         //
         this.events.on('transitionstart', function (fromScene, duration) {
-            this.cameras.main.setZoom(0.05);
+            this.cameras.main.setZoom(0.001);
         }, this);
 
         this.events.on('transitioncomplete', function (fromScene, duration) {
@@ -93,7 +93,7 @@ class ContactScene extends Phaser.Scene {
         //console.log("clicked")
         this.scene.transition({
             target: "Menu",
-            duration: 2,
+            duration: 200,
         })
         // this.scene.start("Menu");
     }

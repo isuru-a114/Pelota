@@ -15,7 +15,7 @@ class HelpScene extends Phaser.Scene {
 
         //
         this.events.on('transitionstart', function (fromScene, duration) {
-            this.cameras.main.setZoom(0.05);
+            this.cameras.main.setZoom(0.001);
         }, this);
 
         this.events.on('transitioncomplete', function (fromScene, duration) {
@@ -148,7 +148,7 @@ class HelpScene extends Phaser.Scene {
             moveAbove: true,
             // moveBelow: false,
 
-            duration: 500,
+            duration: 300,
         })
         // this.scene.restart("Menu");
     }

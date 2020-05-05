@@ -190,7 +190,7 @@ class OptionScene extends Phaser.Scene {
             moveAbove: true,
             // moveBelow: false,
 
-            duration: 100,
+            duration: 300,
         })
         // this.scene.start("Menu");
     }
