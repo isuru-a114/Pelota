@@ -36,7 +36,7 @@ class CountDown extends Phaser.Scene {
             this.scene.transition({
                 target: game.globals.gameDiffculty,
                 moveAbove: true,
-                duration: 100,
+                duration: 300,
             })
             // this.scene.start(game.globals.gameDiffculty);
         }, this);
@@ -46,7 +46,7 @@ class CountDown extends Phaser.Scene {
             this.scene.transition({
                 target: game.globals.gameDiffculty,
                 moveAbove: true,
-                duration: 100,
+                duration: 300,
             })
             // this.scene.start(game.globals.gameDiffculty);
         }
@@ -58,22 +58,22 @@ class CountDown extends Phaser.Scene {
         this.initialTime = 3;
 
         this.image = this.add.image(game.config.width / 2, game.config.height / 2, 'gamePlayBg');
-        this.image.displayHeight = 0;
-        this.image.displayWidth = 0;
+        this.image.displayHeight = game.config.height;
+        this.image.displayWidth = game.config.width;
 
         //
         this.events.on('transitionstart', function (fromScene, duration) {
-            console.log("he he")
+            this.cameras.main.setZoom(0.05);
         }, this);
 
         this.events.on('transitioncomplete', function (fromScene, duration) {
-            this.tweens.add({
-                targets: this.image,
-                scaleX: 0.6,
-                scaleY: 0.6,
-                duration: 300
-            });
+            // this.cameras.main.zoomTo(1, 300);
+            this.cameras.main.zoomTo(1, 300);
         }, this);
+
+        // this.events.on('transitioncomplete', function (fromScene) {
+
+        // });
 
         this.events.on('transitionout', function (toScene, duration) {
 
