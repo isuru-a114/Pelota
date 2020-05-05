@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0909c59-1295-42af-8225-35b337c8ea7b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/scenes/ContactScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/ContactScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/Difficulty.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/Difficulty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/GameOver.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/GameOver.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/HelpScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/HelpScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/IntroductionScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/IntroductionScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/OptionScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/OptionScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/PreloaderScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/PreloaderScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/ScoreScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/ScoreScene.js" afterDir="false" />
-    </list>
+    <list default="true" id="a0909c59-1295-42af-8225-35b337c8ea7b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +74,7 @@
       <workItem from="1588660107913" duration="147000" />
       <workItem from="1588662527826" duration="2063000" />
       <workItem from="1588667219803" duration="2067000" />
-      <workItem from="1588672961997" duration="5324000" />
+      <workItem from="1588672961997" duration="5615000" />
     </task>
     <servers />
   </component>
