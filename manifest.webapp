@@ -1,17 +1,13 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "name": "Pelota",
   "launch_path": "/index.html",
   "description": "Click to make the ball jump. Pass through the walls when they are the same color.",
   "subtitle": "Make the ball match the wall",
   "type": "web",
   "icons": {
-    "16": "/icons/pelota16.png",
-    "48": "/icons/pelota48.png",
     "56": "/icons/pelota56.png",
-    "60": "/icons/pelota60.png",
-    "112": "/icons/pelota112.png",
-    "128": "/icons/pelota128.png"
+    "112": "/icons/pelota112.png"
   },
   "developer": {
     "name": "Eyepax",
@@ -25,7 +21,8 @@
   ],
   "default_locale": "en-US",
   "categories": [
-    "sports"
+    "sports",
+    "games"
   ],
   "permissions": {
     "desktop-notification": {

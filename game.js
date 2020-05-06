@@ -59,7 +59,7 @@ window.onload = function () {
         height: 640,
 
         // background color (black)
-        backgroundColor: 0x1c0241,
+        backgroundColor: 0x1b0040,
 
         // scene to play
         // scene: playGame,
