@@ -33,19 +33,6 @@ class GameOver extends Phaser.Scene {
   create() {
 
     //
-    this.events.on('transitionstart', function (fromScene, duration) {
-      this.cameras.main.setZoom(0.001);
-    }, this);
-
-    this.events.on('transitioncomplete', function (fromScene, duration) {
-      // this.cameras.main.zoomTo(1, 300);
-      this.cameras.main.zoomTo(1, 300);
-    }, this);
-
-    // this.events.on('transitioncomplete', function (fromScene) {
-
-    // });
-
     this.events.on('transitionout', function (toScene, duration) {
 
       this.cameras.main.zoomTo(0.05, 300);
@@ -54,19 +41,6 @@ class GameOver extends Phaser.Scene {
     //
 
     level = 1;
-
-    //kaiads
-    getKaiAd({
-      publisher: 'ca24f2d0-de89-4c1a-80c4-51e14d317000',
-      app: 'Pelota',
-      slot: 'Pelota',
-      onerror: err => console.error('Custom catch:', err),
-      onready: ad => {
-        // Ad is ready to be displayed
-        // calling 'display' will display the ad
-        ad.call('display')
-      }
-    })
 
     this.input.keyboard.on('keyup', function (e) {
       if (e.key == "Enter") {
@@ -166,6 +140,19 @@ class GameOver extends Phaser.Scene {
 
     game.globals.level = 1;
     game.globals.gameDiffculty = "Difficulty";
+
+     //kaiads
+     getKaiAd({
+      publisher: 'ca24f2d0-de89-4c1a-80c4-51e14d317000',
+      app: 'Pelota',
+      slot: 'Pelota',
+      onerror: err => console.error('Custom catch:', err),
+      onready: ad => {
+        // Ad is ready to be displayed
+        // calling 'display' will display the ad
+        ad.call('display')
+      }
+    })
 
   }
 

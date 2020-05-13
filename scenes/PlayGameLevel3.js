@@ -1,11 +1,11 @@
 // playGame scene
-class playGameLevel3 extends Phaser.Scene{
-    constructor(){
+class playGameLevel3 extends Phaser.Scene {
+    constructor() {
         super({ key: "PlayGame3", active: false });
     }
 
     // preloading assets
-    preload(){
+    preload() {
         this.load.image("wall", "assets/img/wall.png");
         this.load.image("ball", "assets/img/ball.png");
         this.load.image("coin", "assets/img/coin.png");
@@ -15,7 +15,7 @@ class playGameLevel3 extends Phaser.Scene{
     }
 
     // method to be executed once, when the scene has been created
-    create(){
+    create() {
 
         // arrays where to store left and right walls
         this.leftWalls = [];
@@ -24,7 +24,7 @@ class playGameLevel3 extends Phaser.Scene{
         this.createBackground();
 
         // each wall is made by "gameOptions.bars" pieces, so we actually have "gameOptions.bars" walls each side
-        for(var i = 0; i < gameOptions.bars; i++){
+        for (var i = 0; i < gameOptions.bars; i++) {
 
             // adding left and right walls
             this.leftWalls[i] = this.addWall(i, LEFT);
@@ -76,14 +76,14 @@ class playGameLevel3 extends Phaser.Scene{
         this.matter.world.on("collisionstart", function (e, b1, b2) {
 
             // checking b1 and b2 labels to be "leftwall"
-            if(b1.label == "leftwall" || b2.label == "leftwall"){
+            if (b1.label == "leftwall" || b2.label == "leftwall") {
                 this.wallHitScore();
                 // handling collisions on the LEFT side
                 this.handleWallCollision(LEFT, b1, b2);
             }
 
             // checking b1 and b2 labels to be "rightwall"
-            if(b1.label == "rightwall" || b2.label == "rightwall"){
+            if (b1.label == "rightwall" || b2.label == "rightwall") {
                 this.wallHitScore();
                 // handling collisions on the RIGHT side
                 this.handleWallCollision(RIGHT, b1, b2);
@@ -97,7 +97,7 @@ class playGameLevel3 extends Phaser.Scene{
             }
         }, this);
 
-        scoreText = this.add.text(36, 16, 'SCORE: ' + score , { fontSize: '60px', fill: '#FFF' });
+        scoreText = this.add.text(36, 16, 'SCORE: ' + score, { fontSize: '60px', fill: '#FFF' });
 
         //paser pause
         this.input.once('pointerup', function () {
@@ -107,7 +107,7 @@ class playGameLevel3 extends Phaser.Scene{
     }
 
     // method to add a wall, given its number (0 = top) and it side
-    addWall(wallNumber, side){
+    addWall(wallNumber, side) {
 
         // getting "wall" preloaded image
         var wallTexture = this.textures.get("wall");
@@ -138,16 +138,16 @@ class playGameLevel3 extends Phaser.Scene{
     }
 
     // method to place the coin
-    placeCoin(){
+    placeCoin() {
         this.coins.x = Phaser.Math.Between(game.config.width * 0.2, game.config.width * 0.8);
         this.coins.y = Phaser.Math.Between(game.config.height * 0.2, game.config.height * 0.8);
     }
 
     // method to handle ball Vs wall collision
-    handleWallCollision(side, bodyA, bodyB){
+    handleWallCollision(side, bodyA, bodyB) {
 
         // if the ball and the wall have different colors...
-        if(bodyA.color != bodyB.color){
+        if (bodyA.color != bodyB.color) {
 
             this.scene.pause();
 
@@ -162,10 +162,10 @@ class playGameLevel3 extends Phaser.Scene{
     }
 
     // method to paint the walls, in the argument the array of walls
-    paintWalls(walls){
+    paintWalls(walls) {
 
         // looping through all walls
-        walls.forEach(function(wall){
+        walls.forEach(function (wall) {
 
             // picking a random color
             var color = Phaser.Math.RND.pick(gameOptions.barColors);
@@ -188,21 +188,20 @@ class playGameLevel3 extends Phaser.Scene{
     }
 
     // method to jump
-    jump(){
+    jump() {
 
         // setting new ball velocity
         this.ball.setVelocity((this.ball.body.velocity.x > 0) ? gameOptions.ballSpeed : -gameOptions.ballSpeed, -gameOptions.jumpForce);
     }
 
     // method to be called at each frame
-    update(){
+    update() {
 
         // updating ball velocity
         this.ball.setVelocity((this.ball.body.velocity.x > 0) ? gameOptions.ballSpeed : -gameOptions.ballSpeed, this.ball.body.velocity.y);
 
         // if the ball flies off the screen...
-        if(this.ball.y < 0 || this.ball.y > game.config.height){
-
+        if (this.ball.y < 0 || this.ball.y > game.config.height) {
             this.scene.start("GameOver");
         }
 
@@ -216,22 +215,22 @@ class playGameLevel3 extends Phaser.Scene{
         // }
     }
 
-    coinCollectScore () {
+    coinCollectScore() {
         score += 10;
         scoreText.setText('SCORE: ' + score);
     }
 
-    wallHitScore () {
+    wallHitScore() {
         score += 5;
         scoreText.setText('SCORE: ' + score);
     }
 
-    resetScore(){
+    resetScore() {
         score = 0;
     }
 
-    createBackground(){
-        this.bg = this.add.graphics({x: 0, y: 0});
+    createBackground() {
+        this.bg = this.add.graphics({ x: 0, y: 0 });
         this.bg.fillStyle('0x393B1C', 1);
         this.bg.fillRect(0, 0, game.config.width, game.config.height);
     }

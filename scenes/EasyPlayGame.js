@@ -271,7 +271,7 @@ class EasyPlayGame extends Phaser.Scene {
 
         // if the ball flies off the screen...
         if (this.ball.y < 0 || this.ball.y > game.config.height) {
-            this.scene.start("GameOver");
+            this.scene.start("GameOver");            
         }
 
         if (score > this.gameLevelFlag) {
