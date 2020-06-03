@@ -25,7 +25,7 @@ class HardPlayGame extends Phaser.Scene {
         this.image.displayHeight = game.config.height;
         this.image.displayWidth = game.config.width;
 
-        this.LEVEL = localStorage.getItem('LEVEL') || 0;
+        this.LEVEL = localStorage.getItem('BLEVEL') || 0;
 
         if (this.LEVEL == 0) {
             this.LEVEL = 1;
@@ -37,7 +37,7 @@ class HardPlayGame extends Phaser.Scene {
         this.leftWalls = [];
         this.rightWalls = [];
 
-        this.currentBar = localStorage.getItem('HARDBARS') || 0;
+        this.currentBar = localStorage.getItem('BHARDBARS') || 0;
 
         if (this.currentBar == 0) {
             this.currentBar = gameOptions.bars;
@@ -315,7 +315,7 @@ class HardPlayGame extends Phaser.Scene {
         }
 
         this.currentBar = parseInt(this.currentBar) + 2;
-        localStorage.setItem('HARDBARS', this.currentBar);
+        localStorage.setItem('BHARDBARS', this.currentBar);
 
         for (var i = 0; i < this.currentBar; i++) {
 

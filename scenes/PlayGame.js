@@ -24,7 +24,7 @@ class PlayGame extends Phaser.Scene {
         this.image.displayHeight = game.config.height;
         this.image.displayWidth = game.config.width;
 
-        this.LEVEL = localStorage.getItem('LEVEL') || 0;
+        this.LEVEL = localStorage.getItem('BLEVEL') || 0;
 
         if (this.LEVEL == 0) {
             this.LEVEL = 1;
@@ -36,7 +36,7 @@ class PlayGame extends Phaser.Scene {
         this.leftWalls = [];
         this.rightWalls = [];
 
-        this.currentBar = localStorage.getItem('BARS') || 0;
+        this.currentBar = localStorage.getItem('BBARS') || 0;
 
         if (this.currentBar == 0) {
             this.currentBar = gameOptions.bars;
@@ -284,7 +284,7 @@ class PlayGame extends Phaser.Scene {
                     this.gameLevelUpdate();
                     break;
             }
-            localStorage.setItem('LEVEL', this.LEVEL);
+            localStorage.setItem('BLEVEL', this.LEVEL);
         }
 
     }
@@ -313,7 +313,7 @@ class PlayGame extends Phaser.Scene {
         }
 
         this.currentBar = parseInt(this.currentBar, 10) + 2;
-        localStorage.setItem('BARS', this.currentBar);
+        localStorage.setItem('BBARS', this.currentBar);
 
         for (var i = 0; i < this.currentBar; i++) {
 
