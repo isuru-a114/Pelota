@@ -54,6 +54,26 @@ class IntroductionScene extends Phaser.Scene {
         }, this);
 
         this.setValueToLocalStorage();
+
+        //touchable
+
+        this.skip.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+            this.scene.transition({
+                target: "Menu",
+                moveAbove: true,
+                duration: 300,
+            })
+        });
+
+        this.input.on("pointerdown", (pointer) => {
+            if (pointer.x < 120) {
+                this.changeSlidesLeft()
+            } else {
+                this.changeSlidesRight()
+            }
+
+        }, this);
+
     }
 
     setValueToLocalStorage() {

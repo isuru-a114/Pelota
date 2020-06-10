@@ -141,6 +141,24 @@ class GameOver extends Phaser.Scene {
     game.globals.level = 1;
     game.globals.gameDiffculty = "Difficulty";
 
+    //touchable
+
+    this.btn_restart.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+      score = 0
+      this.scene.transition({
+        target: game.globals.gameDiffculty,
+        moveAbove: true,
+        duration: 300,
+      })
+    });
+    this.btn_exit.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+      this.scene.transition({
+        target: "Menu",
+        moveAbove: true,
+        duration: 300,
+      })
+    });
+
      //kaiads
      getKaiAd({
       publisher: 'ca24f2d0-de89-4c1a-80c4-51e14d317000',
