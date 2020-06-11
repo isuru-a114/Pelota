@@ -107,6 +107,7 @@ class Difficulty extends Phaser.Scene {
         });
 
         this.btn_easy.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+            game.globals.gameDiffculty = "EasyPlayGame";
             this.scene.transition({
                 target: "CountDown",
                 moveAbove: true,
@@ -114,6 +115,7 @@ class Difficulty extends Phaser.Scene {
             })
         });
         this.btn_medium.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+            game.globals.gameDiffculty = "PlayGame";
             this.scene.transition({
                 target: "CountDown",
                 moveAbove: true,
@@ -121,6 +123,7 @@ class Difficulty extends Phaser.Scene {
             })
         });
         this.btn_hard.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+            game.globals.gameDiffculty = "HardPlayGame";
             this.scene.transition({
                 target: "CountDown",
                 moveAbove: true,

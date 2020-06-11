@@ -31,7 +31,6 @@ class CountDown extends Phaser.Scene {
     onEvent() {
         this.initialTime -= 1; // One second
         this.text.setText(this.initialTime);
-
         this.keEnter = this.input.keyboard.on("keyup_ENTER", () => {
             this.scene.transition({
                 target: game.globals.gameDiffculty,
@@ -41,6 +40,15 @@ class CountDown extends Phaser.Scene {
             // this.scene.start(game.globals.gameDiffculty);
         }, this);
 
+        //for touchable screens
+        this.input.on("pointerdown", () => {
+            this.scene.transition({
+                target: game.globals.gameDiffculty,
+                moveAbove: true,
+                duration: 300,
+            })
+        }, this);
+
         if (this.initialTime == 0) {
             //console.log(game.globals.gameDiffculty);
             this.scene.transition({
@@ -48,6 +56,7 @@ class CountDown extends Phaser.Scene {
                 moveAbove: true,
                 duration: 300,
             })
+
             // this.scene.start(game.globals.gameDiffculty);
         }
     }
