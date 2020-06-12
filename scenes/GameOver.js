@@ -163,6 +163,7 @@ class GameOver extends Phaser.Scene {
       })
     });
     this.btn_exit.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+      score = 0
       this.scene.transition({
         target: "Menu",
         moveAbove: true,
@@ -287,6 +288,7 @@ class GameOver extends Phaser.Scene {
     //console.log(this.selected_button);
     switch (this.selected_button) {
       case "Restart":
+        score = 0
         //console.log("Restart SELECT");
         this.reStoreGameLevelValues();
         // this.scene.start(game.globals.gameDiffculty);
@@ -306,6 +308,7 @@ class GameOver extends Phaser.Scene {
         // this.scene.start("Menu")
         break;
       case "Exit":
+        score = 0
         //console.log("Exit SELECT");
         this.scene.transition({
           target: "Menu",
