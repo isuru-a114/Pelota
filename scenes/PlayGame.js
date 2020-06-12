@@ -219,6 +219,9 @@ class PlayGame extends Phaser.Scene {
 
         if (bodyA.color != bodyB.color) {
             this.scene.pause();
+            if (score >= 10){
+                score -= 10;
+            }
             this.scene.start("GameOver");
         }
 

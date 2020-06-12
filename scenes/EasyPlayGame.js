@@ -224,6 +224,9 @@ class EasyPlayGame extends Phaser.Scene {
         // if the ball and the wall have different colors...
         if (bodyA.color != bodyB.color) {
             this.scene.pause();
+            if (score >= 10){
+                score -= 10;
+            }
             this.scene.start("GameOver");
         }
 

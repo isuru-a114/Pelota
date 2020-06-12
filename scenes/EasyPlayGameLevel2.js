@@ -158,7 +158,9 @@ class EasyPlayGameLevel2 extends Phaser.Scene {
         if (bodyA.color != bodyB.color) {
 
             this.scene.pause();
-
+            if (score >= 5){
+                score -= 5;
+            }
             this.scene.start("GameOver");
         }
 
