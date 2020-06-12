@@ -22,7 +22,10 @@ class Difficulty extends Phaser.Scene {
     }
 
     create() {
-        
+        localStorage.setItem('LEVEL', 0);
+        localStorage.setItem('EASYBARS', 0);
+        localStorage.setItem('BARS', 0);
+
         //
         this.events.on('transitionstart', function (fromScene, duration) {
             this.cameras.main.setZoom(0.001);
