@@ -160,17 +160,19 @@ class GameOver extends Phaser.Scene {
     });
 
      //kaiads
-     getKaiAd({
-      publisher: 'ca24f2d0-de89-4c1a-80c4-51e14d317000',
-      app: 'Pelota',
-      slot: 'Pelota',
-      onerror: err => console.error('Custom catch:', err),
-      onready: ad => {
-        // Ad is ready to be displayed
-        // calling 'display' will display the ad
-        ad.call('display')
-      }
-    })
+    //temporary comment
+
+    //  getKaiAd({
+    //   publisher: 'ca24f2d0-de89-4c1a-80c4-51e14d317000',
+    //   app: 'Pelota',
+    //   slot: 'Pelota',
+    //   onerror: err => console.error('Custom catch:', err),
+    //   onready: ad => {
+    //     // Ad is ready to be displayed
+    //     // calling 'display' will display the ad
+    //     ad.call('display')
+    //   }
+    // })
 
   }
 
