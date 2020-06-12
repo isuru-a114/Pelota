@@ -102,7 +102,18 @@ class GameOver extends Phaser.Scene {
       localStorage.setItem('Second Best Score', localStorage.getItem('Best Score'));
       localStorage.setItem('Best Score', score);
       this.bestScore.setText(localStorage.getItem('Best Score'));
+    } else if ((localStorage.getItem('Best Score') > score && score >= localStorage.getItem('Second Best Score')) || localStorage.getItem('Second Best Score') == 'null') {
+      localStorage.setItem('Third Best Score', localStorage.getItem('Second Best Score'));
+      localStorage.setItem('Second Best Score', score);
+    } else if ((localStorage.getItem('Second Best Score') > score && score >= localStorage.getItem('Third Best Score')) || localStorage.getItem('Third Best Score') == 'null') {
+      localStorage.setItem('Third Best Score', score);
     }
+    // if (score > localStorage.getItem('Best Score')) {
+    //   localStorage.setItem('Third Best Score', localStorage.getItem('Second Best Score'));
+    //   localStorage.setItem('Second Best Score', localStorage.getItem('Best Score'));
+    //   localStorage.setItem('Best Score', score);
+    //   this.bestScore.setText(localStorage.getItem('Best Score'));
+    // }
 
     // Click to play text
     // this.text_click_to_play = this.add.text(this.CONFIG.centerX/4, this.CONFIG.centerY+80, 'Click to Play');
