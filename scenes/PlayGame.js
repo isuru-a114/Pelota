@@ -277,13 +277,13 @@ class PlayGame extends Phaser.Scene {
 
         if (score > this.gameLevelFlag) {
             switch (score) {
-                case 350:
+                case 50:
                     this.LEVEL = parseInt(this.LEVEL, 10) + 1;
                     levelText.setText('LEVEL: ' + this.LEVEL);
                     this.gameLevelFlag = score;
                     this.gameLevelUpdate();
                     break;
-                case 700:
+                case 100:
                     this.LEVEL = parseInt(this.LEVEL, 10) + 1;
                     levelText.setText('LEVEL: ' + this.LEVEL);
                     this.gameLevelFlag = score;
