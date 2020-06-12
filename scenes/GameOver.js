@@ -166,8 +166,6 @@ class GameOver extends Phaser.Scene {
     game.globals.level = 1;
     game.globals.gameDiffculty = "Difficulty";
 
-<<<<<<< HEAD
-=======
     //touchable
 
     this.btn_restart.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
@@ -202,7 +200,6 @@ class GameOver extends Phaser.Scene {
     //   }
     // })
 
->>>>>>> 36d7dc08e1faa555d8980215580c4e98ef230e20
   }
 
 
