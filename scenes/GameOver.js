@@ -91,7 +91,7 @@ class GameOver extends Phaser.Scene {
     //===============================
     this.FinalScore = this.add.text(game.config.width / 1.6, game.config.width / 1.83, score, { fontSize: '30px', fill: '#FFF' });
 
-    this.bestScore = this.add.text(game.config.width / 1.6, game.config.width / 1.55, '' + localStorage.getItem('BBest Score'), { fontSize: '30px', fill: '#FFF' });
+    this.bestScore = this.add.text(game.config.width / 1.6, game.config.width / 1.55, '' + localStorage.getItem('Best Score'), { fontSize: '30px', fill: '#FFF' });
 
     //==================================
 
@@ -107,14 +107,14 @@ class GameOver extends Phaser.Scene {
     //this.finalScore.displayHeight = game.config.height/5;
     //this.finalScore.displayWidth = game.config.width/4;
 
-    if (localStorage.getItem('BBest Score') === null) {
+    if (localStorage.getItem('Best Score') === null) {
       this.bestScore.setText(0);
     } else {
-      this.bestScore.setText(localStorage.getItem('BBest Score'));
+      this.bestScore.setText(localStorage.getItem('Best Score'));
     }
 
-    if (score > localStorage.getItem('BBest Score')) {
-      localStorage.setItem('BThird Best Score', localStorage.getItem('BSecond Best Score'));
+    if (score > localStorage.getItem('Best Score')) {
+      localStorage.setItem('Third Best Score', localStorage.getItem('Second Best Score'));
       localStorage.setItem('Second Best Score', localStorage.getItem('Best Score'));
       localStorage.setItem('Best Score', score);
       this.bestScore.setText(localStorage.getItem('Best Score'));
