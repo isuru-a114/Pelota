@@ -96,6 +96,40 @@ class Difficulty extends Phaser.Scene {
         this.downArrow = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN);
         //this.key_enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
         this.back_space = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.BACKSPACE);
+
+        //touchable
+        this.about.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+            this.scene.transition({
+                target: "Menu",
+                moveAbove: true,
+                duration: 300,
+            })
+        });
+
+        this.btn_easy.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+            game.globals.gameDiffculty = "EasyPlayGame";
+            this.scene.transition({
+                target: "CountDown",
+                moveAbove: true,
+                duration: 300,
+            })
+        });
+        this.btn_medium.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+            game.globals.gameDiffculty = "PlayGame";
+            this.scene.transition({
+                target: "CountDown",
+                moveAbove: true,
+                duration: 300,
+            })
+        });
+        this.btn_hard.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+            game.globals.gameDiffculty = "HardPlayGame";
+            this.scene.transition({
+                target: "CountDown",
+                moveAbove: true,
+                duration: 300,
+            })
+        });
     }
 
     update() {

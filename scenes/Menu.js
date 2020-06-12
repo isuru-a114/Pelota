@@ -124,6 +124,38 @@ class Menu extends Phaser.Scene {
 
         this.about = this.add.text(game.config.width - game.config.width * 10 / 100, game.config.height - game.config.height * 5 / 100, "About").setFontSize(30).setFontFamily("Arial").setOrigin(0.5);
 
+        // for touchble
+
+        this.btn_play.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+            this.scene.transition({
+                target: "Difficulty",
+                moveAbove: true,
+                duration: 300,
+            })
+        });
+
+        this.btn_score.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+            this.scene.transition({
+                target: "ScoreScene",
+                moveAbove: true,
+                duration: 300,
+            })
+        });
+        this.btn_help.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+            this.scene.transition({
+                target: "HelpScene",
+                moveAbove: true,
+                duration: 300,
+            })
+        });
+        this.about.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+            this.scene.transition({
+                target: "ContactScene",
+                moveAbove: true,
+                duration: 300,
+            })
+        });
+
         //this.option = this.add.text(game.config.width - game.config.width * 90 / 100, game.config.height - game.config.height * 5 / 100, "Option").setFontSize(50).setFontFamily("Arial").setOrigin(0.5);
 
         // create mouse input

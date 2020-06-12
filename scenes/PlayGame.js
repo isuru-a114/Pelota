@@ -96,6 +96,9 @@ class PlayGame extends Phaser.Scene {
 
         this.keEnter = this.input.keyboard.on("keyup_ENTER", this.jump, this);
 
+        //for touchable screens
+        this.input.on("pointerdown", this.jump, this);
+
         // waiting for a "collisionstart" event. "e" is the event, "b1" and "b2" the bodies
         this.matter.world.on("collisionstart", function (e, b1, b2) {
 
@@ -216,6 +219,9 @@ class PlayGame extends Phaser.Scene {
 
         if (bodyA.color != bodyB.color) {
             this.scene.pause();
+            if (score >= 10){
+                score -= 10;
+            }
             this.scene.start("GameOver");
         }
 

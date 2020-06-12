@@ -116,7 +116,18 @@ class GameOver extends Phaser.Scene {
       localStorage.setItem('Second Best Score', localStorage.getItem('Best Score'));
       localStorage.setItem('Best Score', score);
       this.bestScore.setText(localStorage.getItem('Best Score'));
+    } else if ((localStorage.getItem('Best Score') > score && score >= localStorage.getItem('Second Best Score')) || localStorage.getItem('Second Best Score') == 'null') {
+      localStorage.setItem('Third Best Score', localStorage.getItem('Second Best Score'));
+      localStorage.setItem('Second Best Score', score);
+    } else if ((localStorage.getItem('Second Best Score') > score && score >= localStorage.getItem('Third Best Score')) || localStorage.getItem('Third Best Score') == 'null') {
+      localStorage.setItem('Third Best Score', score);
     }
+    // if (score > localStorage.getItem('Best Score')) {
+    //   localStorage.setItem('Third Best Score', localStorage.getItem('Second Best Score'));
+    //   localStorage.setItem('Second Best Score', localStorage.getItem('Best Score'));
+    //   localStorage.setItem('Best Score', score);
+    //   this.bestScore.setText(localStorage.getItem('Best Score'));
+    // }
 
     // Click to play text
     // this.text_click_to_play = this.add.text(this.CONFIG.centerX/4, this.CONFIG.centerY+80, 'Click to Play');
@@ -155,6 +166,43 @@ class GameOver extends Phaser.Scene {
     game.globals.level = 1;
     game.globals.gameDiffculty = "Difficulty";
 
+<<<<<<< HEAD
+=======
+    //touchable
+
+    this.btn_restart.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+      score = 0
+      this.scene.transition({
+        target: game.globals.gameDiffculty,
+        moveAbove: true,
+        duration: 300,
+      })
+    });
+    this.btn_exit.setInteractive().on('pointerdown', (pointer, localX, localY, event) => {
+      score = 0
+      this.scene.transition({
+        target: "Menu",
+        moveAbove: true,
+        duration: 300,
+      })
+    });
+
+     //kaiads
+    //temporary comment
+
+    //  getKaiAd({
+    //   publisher: 'ca24f2d0-de89-4c1a-80c4-51e14d317000',
+    //   app: 'Pelota',
+    //   slot: 'Pelota',
+    //   onerror: err => console.error('Custom catch:', err),
+    //   onready: ad => {
+    //     // Ad is ready to be displayed
+    //     // calling 'display' will display the ad
+    //     ad.call('display')
+    //   }
+    // })
+
+>>>>>>> 36d7dc08e1faa555d8980215580c4e98ef230e20
   }
 
 
@@ -257,6 +305,7 @@ class GameOver extends Phaser.Scene {
     //console.log(this.selected_button);
     switch (this.selected_button) {
       case "Restart":
+        score = 0
         //console.log("Restart SELECT");
         this.reStoreGameLevelValues();
         // this.scene.start(game.globals.gameDiffculty);
@@ -276,6 +325,7 @@ class GameOver extends Phaser.Scene {
         // this.scene.start("Menu")
         break;
       case "Exit":
+        score = 0
         //console.log("Exit SELECT");
         this.scene.transition({
           target: "Menu",
